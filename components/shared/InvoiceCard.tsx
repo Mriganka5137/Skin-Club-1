@@ -8,7 +8,7 @@ import { Separator } from "../ui/separator";
 
 const InvoiceCard = () => {
   return (
-    <Card className="mt-5">
+    <Card className="mt-5 border-color--4C4D4F border-opacity-20">
       <CardHeader className="">
         <Image
           src={Logo}
