@@ -38,29 +38,54 @@ const DataTable = () => {
               </TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody className="bg-color--F8F8F8 max-lg:bg-transparent">
+          <TableBody className="bg-color--F8F8F8 max-lg:bg-transparent ">
             {payments.map((payment, index) => (
               <TableRow
                 className={cn(
-                  "cursor-pointer",
-                  selected === index && "bg-white"
+                  "cursor-pointer ",
+                  selected === index && "bg-white "
                 )}
                 key={index}
                 onClick={() => setSelected(index)}
               >
-                <TableCell className=" p-[9px] mobile:p-4">
+                <TableCell
+                  className={cn(
+                    "p-[9px] mobile:p-4",
+                    selected === index && "text-black"
+                  )}
+                >
                   {payment.Patient}
                 </TableCell>
-                <TableCell className="p-[9px] mobile:p-4">
+                <TableCell
+                  className={cn(
+                    "p-[9px] mobile:p-4",
+                    selected === index && "text-black"
+                  )}
+                >
                   {payment.Time}
                 </TableCell>
-                <TableCell className=" p-[9px] mobile:p-4">
+                <TableCell
+                  className={cn(
+                    "p-[9px] mobile:p-4",
+                    selected === index && "text-black"
+                  )}
+                >
                   {formatDate(payment.date)}
                 </TableCell>
-                <TableCell className=" p-[9px] mobile:p-4">
+                <TableCell
+                  className={cn(
+                    "p-[9px] mobile:p-4",
+                    selected === index && "text-black"
+                  )}
+                >
                   ${payment.Total}
                 </TableCell>
-                <TableCell className="  p-[9px] mobile:p-4 text-right">
+                <TableCell
+                  className={cn(
+                    "p-[9px] mobile:p-4 text-right",
+                    selected === index && "text-black"
+                  )}
+                >
                   <Badge
                     className={cn(
                       "font-extralight rounded-[10px]",
