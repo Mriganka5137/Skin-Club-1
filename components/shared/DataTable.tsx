@@ -18,14 +18,24 @@ const DataTable = () => {
   return (
     <div className="px-7 py-6 max-tablet:px-2 ">
       <div className="border rounded-xl overflow-hidden max-lg:border-none">
-        <Table className=" text-[10px] max-lg:text-[12px] max-sm:text-[8px]">
-          <TableHeader className=" text-color--4C4D4F opacity-80 text-xs font-light max-lg:bg-white">
+        <Table className=" text-[6px] mobile:text-[10px]">
+          <TableHeader className=" text-color--4C4D4F opacity-80  font-light max-lg:bg-white text-[6px] mobile:text-[10px]">
             <TableRow className="border-none ">
-              <TableHead className="  text-left">Patient</TableHead>
-              <TableHead className=" w-fit">Time</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Total</TableHead>
-              <TableHead className="text-right">Status</TableHead>
+              <TableHead className="h-7 mobile:h-[50px] text-left p-[9px] mobile:p-4">
+                Patient
+              </TableHead>
+              <TableHead className="h-7 mobile:h-[50px] p-[9px] mobile:p-4">
+                Time
+              </TableHead>
+              <TableHead className="h-7 mobile:h-[50px] p-[9px] mobile:p-4">
+                Date
+              </TableHead>
+              <TableHead className="h-7 mobile:h-[50px] p-[9px] mobile:p-4">
+                Total
+              </TableHead>
+              <TableHead className="h-7 mobile:h-[50px] text-right p-[9px] mobile:p-4">
+                Status
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody className="bg-color--F8F8F8 max-lg:bg-transparent">
@@ -38,19 +48,19 @@ const DataTable = () => {
                 key={index}
                 onClick={() => setSelected(index)}
               >
-                <TableCell className=" max-tablet:p-3">
+                <TableCell className=" p-[9px] mobile:p-4">
                   {payment.Patient}
                 </TableCell>
-                <TableCell className="w-fit max-tablet:p-3">
+                <TableCell className="p-[9px] mobile:p-4">
                   {payment.Time}
                 </TableCell>
-                <TableCell className=" max-tablet:p-3">
+                <TableCell className=" p-[9px] mobile:p-4">
                   {formatDate(payment.date)}
                 </TableCell>
-                <TableCell className=" max-tablet:p-3">
+                <TableCell className=" p-[9px] mobile:p-4">
                   ${payment.Total}
                 </TableCell>
-                <TableCell className="  max-tablet:p-3 text-right">
+                <TableCell className="  p-[9px] mobile:p-4 text-right">
                   <Badge
                     className={cn(
                       "font-extralight rounded-[10px]",
@@ -59,7 +69,7 @@ const DataTable = () => {
                         : "bg-color--36C490",
                       payment.Status === "Canceled" &&
                         "bg-color--FFF9F1 text-color--4C4D4F",
-                      "text-[10px] max-lg:text-[12px] max-sm:text-[5px]"
+                      "text-[6px] mobile:text-[10px] px-2 mobile:px-4"
                     )}
                   >
                     {payment.Status}
