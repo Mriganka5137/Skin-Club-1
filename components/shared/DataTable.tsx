@@ -81,7 +81,7 @@ const DataTable = () => {
           <TableFooter className="max-lg:bg-transparent">
             <TableRow className="hover:bg-inherit ">
               <TableCell colSpan={5} align="center">
-                <span className="underline text-sm cursor-pointer">
+                <span className="underline text-[8px] mobile:text-[14px] cursor-pointer">
                   View More
                 </span>
               </TableCell>
